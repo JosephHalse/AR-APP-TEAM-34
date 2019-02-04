@@ -20,7 +20,6 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
@@ -55,8 +54,9 @@ public class AR_Viewer extends MoverioARActivity implements Renderer.RenderListe
     private ImageView mGuidanceImageView_right = null;
     private TextView mErrorTextView = null;
     private boolean  mEnableImageGuidance = true;
-    Button button2;
-    Button button;
+    Button bloodButton;
+    Button tempButton;
+    TextView typeOfObjectText;
 
     // set a Text Pose with Rotation fixed to be always facing user
     private static float[] mTextPose = { 0, -1,  0,  0,
@@ -107,25 +107,26 @@ public class AR_Viewer extends MoverioARActivity implements Renderer.RenderListe
     {
         super.onCreate(savedInstanceState);
 
-
-
         mGUIView = View.inflate(this, R.layout.ar_track_ui, null);
 
         addContentView(mGUIView, new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
 
+        typeOfObjectText = (TextView) findViewById(R.id.typeOfObjectText);
 
-        button2 = (Button) findViewById(R.id.button3);
-        button = (Button) findViewById(R.id.button2);
-        button.setOnClickListener(new View.OnClickListener() {
+
+        bloodButton = (Button) findViewById(R.id.bloodButton);
+        tempButton = (Button) findViewById(R.id.tempButton);
+
+        tempButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                refresh();
+                tempButtonRefresh();
             }
         });
-        button2.setOnClickListener(new View.OnClickListener() {
+        bloodButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                refresh2();
+                bloodButtonRefresh();
             }
         });
 
@@ -159,7 +160,7 @@ public class AR_Viewer extends MoverioARActivity implements Renderer.RenderListe
        // mModelPaperCarLoader = (CallableModelLoader) new CallableModelLoader(ModelType.OBJ, getResources(), R.raw.papercar, cachedModelFilePath + "papercar.e3d").executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         //mModelHeadlightsLoader = (CallableModelLoader) new CallableModelLoader(ModelType.OBJ, getResources(), R.raw.headlights, cachedModelFilePath + "headlights.e3d").executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
        // mModelBlueSirenLoader = (CallableModelLoader) new CallableModelLoader(ModelType.OBJ, getResources(), R.raw.bluesiren, cachedModelFilePath + "bluesiren.e3d").executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-       // mModelOrangeSirenLoader = (CallableModelLoader) new CallableModelLoader(ModelType.OBJ, getResources(), R.raw.orangesiren, cachedModelFilePath + "orangesiren.e3d").executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+        mModelOrangeSirenLoader = (CallableModelLoader) new CallableModelLoader(ModelType.OBJ, getResources(), R.raw.orangesiren, cachedModelFilePath + "orangesiren.e3d").executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         mModelStopSignLoader = (CallableModelLoader) new CallableModelLoader(ModelType.OBJ, getAssets(), TEXTURED_MODEL_FILE_PATH, cachedModelFilePath + "stopsign.e3d").executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         mAnimationRunning = true;
 
@@ -168,6 +169,7 @@ public class AR_Viewer extends MoverioARActivity implements Renderer.RenderListe
             @Override
             public void run() {
                 Global global = (Global) getApplicationContext();
+                typeOfObjectText.setText(global.getName());
 
 
                 String text = "";
@@ -195,7 +197,7 @@ public class AR_Viewer extends MoverioARActivity implements Renderer.RenderListe
                    // mModelPaperCar = mModelPaperCarLoader.get();
                    // mModelHeadlights = mModelHeadlightsLoader.get();
                    // mModelBlueSiren = mModelBlueSirenLoader.get();
-                   // mModelOrangeSiren = mModelOrangeSirenLoader.get();
+                    mModelOrangeSiren = mModelOrangeSirenLoader.get();
                     mModelStopSign = mModelStopSignLoader.get();
                 } catch (InterruptedException e) {
                     Log.e(TAG, "Unable to load model: " + e);
@@ -240,7 +242,7 @@ public class AR_Viewer extends MoverioARActivity implements Renderer.RenderListe
                     //mModelPaperCar.scale.x = mModelPaperCar.scale.y = mModelPaperCar.scale.z = 1.0f;
                     //mModelHeadlights.scale.x = mModelHeadlights.scale.y = mModelHeadlights.scale.z = 1.0f;
                    // mModelBlueSiren.scale.x = mModelBlueSiren.scale.y = mModelBlueSiren.scale.z = 1.0f;
-                   // mModelOrangeSiren.scale.x = mModelOrangeSiren.scale.y = mModelOrangeSiren.scale.z = 1.0f;
+                    mModelOrangeSiren.scale.x = mModelOrangeSiren.scale.y = mModelOrangeSiren.scale.z = 1.0f;
                     mModelStopSign.scale.x = mModelStopSign.scale.y = mModelStopSign.scale.z = 1.0f;
 
                     // Enable ghost mode to simulate virtual object occlusion
@@ -436,16 +438,14 @@ public class AR_Viewer extends MoverioARActivity implements Renderer.RenderListe
         }
     }
 
-    public void refresh(){
+    public void tempButtonRefresh(){
         Global global = (Global) getApplicationContext();
-
         global.setName("temp");
         finish();
         startActivity(getIntent());
     }
-    public void refresh2(){
+    public void bloodButtonRefresh(){
         Global global = (Global) getApplicationContext();
-
         global.setName("model");
         finish();
         startActivity(getIntent());

@@ -1,0 +1,4 @@
+#Tue Jan 29 23:55:49 GMT 2019
+base.0=C\:\\Users\\Duncan\\Documents\\GitHub\\AR-APP-TEAM-34\\AR_Viewer\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+path.0=classes.dex
+renamed.0=classes.dex

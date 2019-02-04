@@ -50,26 +50,36 @@
 	</LinearLayout>
 
 	<Button
-		android:id="@+id/button2"
+		android:id="@+id/tempButton"
 		android:layout_width="178dp"
 		android:layout_height="wrap_content"
 		android:layout_alignParentBottom="true"
+		android:layout_marginBottom="0dp"
 		android:layout_marginEnd="0dp"
 		android:layout_marginRight="0dp"
-		android:layout_marginBottom="0dp"
-		android:layout_toStartOf="@+id/imageView_img"
 		android:layout_toLeftOf="@+id/imageView_img"
-		android:text="Temprature" />
+		android:layout_toStartOf="@+id/imageView_img"
+		android:text="Temperature" />
 
 	<Button
-		android:id="@+id/button3"
+		android:id="@+id/bloodButton"
 		android:layout_width="161dp"
 		android:layout_height="wrap_content"
 		android:layout_alignParentBottom="true"
 		android:layout_marginEnd="71dp"
 		android:layout_marginRight="71dp"
-		android:layout_toStartOf="@+id/button2"
-		android:layout_toLeftOf="@+id/button2"
+		android:layout_toLeftOf="@+id/tempButton"
+		android:layout_toStartOf="@+id/tempButton"
 		android:text="Blood presure" />
+
+	<TextView
+		android:id="@+id/typeOfObjectText"
+		android:layout_width="257dp"
+		android:layout_height="81dp"
+		android:layout_alignParentStart="true"
+		android:layout_alignParentTop="true"
+		android:layout_marginStart="66dp"
+		android:layout_marginTop="35dp"
+		android:gravity="center" />
 
 </RelativeLayout>

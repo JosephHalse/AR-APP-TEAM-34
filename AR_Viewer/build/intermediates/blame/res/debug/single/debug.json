@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "C:\\Users\\Duncan\\Documents\\GitHub\\AR-APP-TEAM-34\\AR_Viewer\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Duncan\\Documents\\GitHub\\AR-APP-TEAM-34\\AR_Viewer\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Duncan\\Documents\\GitHub\\AR-APP-TEAM-34\\AR_Viewer\\build\\intermediates\\res\\merged\\debug\\raw_bluesiren.obj.flat",
+        "source": "C:\\Users\\Duncan\\Documents\\GitHub\\AR-APP-TEAM-34\\AR_Viewer\\src\\main\\res\\raw\\bluesiren.obj"
+    },
+    {
+        "merged": "C:\\Users\\Duncan\\Documents\\GitHub\\AR-APP-TEAM-34\\AR_Viewer\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Duncan\\Documents\\GitHub\\AR-APP-TEAM-34\\AR_Viewer\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Duncan\\Documents\\GitHub\\AR-APP-TEAM-34\\AR_Viewer\\build\\intermediates\\res\\merged\\debug\\layout_ar_track_ui.xml.flat",
+        "source": "C:\\Users\\Duncan\\Documents\\GitHub\\AR-APP-TEAM-34\\AR_Viewer\\src\\main\\res\\layout\\ar_track_ui.xml"
+    },
+    {
+        "merged": "C:\\Users\\Duncan\\Documents\\GitHub\\AR-APP-TEAM-34\\AR_Viewer\\build\\intermediates\\res\\merged\\debug\\raw_papercar.obj.flat",
+        "source": "C:\\Users\\Duncan\\Documents\\GitHub\\AR-APP-TEAM-34\\AR_Viewer\\src\\main\\res\\raw\\papercar.obj"
+    },
+    {
+        "merged": "C:\\Users\\Duncan\\Documents\\GitHub\\AR-APP-TEAM-34\\AR_Viewer\\build\\intermediates\\res\\merged\\debug\\raw_orangesiren.obj.flat",
+        "source": "C:\\Users\\Duncan\\Documents\\GitHub\\AR-APP-TEAM-34\\AR_Viewer\\src\\main\\res\\raw\\orangesiren.obj"
+    },
+    {
+        "merged": "C:\\Users\\Duncan\\Documents\\GitHub\\AR-APP-TEAM-34\\AR_Viewer\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Duncan\\Documents\\GitHub\\AR-APP-TEAM-34\\AR_Viewer\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Duncan\\Documents\\GitHub\\AR-APP-TEAM-34\\AR_Viewer\\build\\intermediates\\res\\merged\\debug\\raw_headlights.obj.flat",
+        "source": "C:\\Users\\Duncan\\Documents\\GitHub\\AR-APP-TEAM-34\\AR_Viewer\\src\\main\\res\\raw\\headlights.obj"
+    },
+    {
+        "merged": "C:\\Users\\Duncan\\Documents\\GitHub\\AR-APP-TEAM-34\\AR_Viewer\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Duncan\\Documents\\GitHub\\AR-APP-TEAM-34\\AR_Viewer\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Duncan\\Documents\\GitHub\\AR-APP-TEAM-34\\AR_Viewer\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Duncan\\Documents\\GitHub\\AR-APP-TEAM-34\\AR_Viewer\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    }
+]
